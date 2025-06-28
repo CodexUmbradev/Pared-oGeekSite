@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    window.addEventListener('load', function() {
+      if (window.innerWidth > 1024) {
+        document.body.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100vh;text-align:center;color:#FFD700;background:black;font-family:sans-serif;padding:20px;"><div><h1>Site disponível apenas em dispositivos móveis.</h1><p>Por favor, acesse pelo seu celular.</p></div></div>';
+      }
+    });
+  </script>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Paredão Geek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/templatemo-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    .event-info h2,
+    .event-info h3 {
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
+  <style>
+    body {
+      background-color: #000000; 
+      color: #FFD700; 
+      font-size: 12px; 
+    }
+    h1 {
+      font-size: 18px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+    p {
+      font-size: 12px;
+    }
+    ul li {
+      font-size: 12px;
+    }
+    a, a:hover, a:focus {
+      color: #FFEA00; 
+    }
+    .btn-primary {
+      background-color: #FFD700;
+      border-color: #FFD700;
+      color: #000000;
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+    .btn-primary:hover {
+      background-color: #FFC107;
+      border-color: #FFC107;
+      color: #000000;
+    }
+    .event-info {
+      background-color: #111111;
+    }
+    .features {
+      background-color: #111111;
+    }
+    .features i, .features h4, .features p {
+      color: #FFD700;
+    }
+    footer {
+      background-color: #000000;
+      color: #FFD700;
+    }
+    ul.countdown li h3 {
+      color: #FFD700;
+      font-size: inherit; 
+    }
+    ul.countdown li span {
+      font-size: inherit; 
+    }
+  </style>
+</head>
+
+<body>
+  <!-- start preloader -->
+  <div class="preloader" style="display:flex; justify-content:center; align-items:center; height:100vh; background:#ffffff;">
+    <img id="preloader-gif" src="" alt="" style="max-width: 400px;"/>
+  </div>
+
+  <script>
+    // Lista de GIFs
+    const gifs = [
+      'images/loading1.gif',
+      'images/loading2.gif',
+      'images/loading3.gif'
+    ];
+
+    const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const preloaderGif = document.getElementById('preloader-gif');
+      if (preloaderGif) {
+        preloaderGif.src = randomGif;
+      }
+    });
+
+    window.addEventListener('load', function() {
+      const preloader = document.querySelector('.preloader');
+      if (preloader) {
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1000); 
+      }
+    });
+  </script>
+
+
+
+<!-- end preloader -->
+
+<!-- countdown section -->
+<section id="countdown" style="position: relative; overflow: hidden; background-image: url('images/baixados.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; color: white; min-height: 800px; padding: 140px 0 100px 0; text-align: center;">
+
+  <!-- bandeirinhas topo -->
+  <img src="images/esquerda.png" alt="Bandeirinhas Topo" style="position: absolute; top: 0; left: 0; width: 125%; height: auto; z-index: 2;">
+
+
+  <div class="container" style="position: relative;">
+    <div class="row">
+<div class="col-xs-12" style="position: relative; display: flex; justify-content: center; align-items: center;">
+
+  <!-- balão esquerdo -->
+  <img src="images/lado1.png" alt="Balão Esquerda" 
+       style="max-width: 200px; height: auto; position: absolute; left: calc(50% - 257px); top: 20px; z-index: 2;">
+
+  <!-- imagem paredão -->
+  <img src="images/paredão.png" alt="Paredão Geek" class="wow bounceIn" data-wow-delay="0.9s" 
+       style="width: 100%; max-width: 300px; height: auto; border: none; padding: 0; background: none; position: relative; z-index: 1;">
+
+  <!-- balão direito -->
+  <img src="images/lado2.png" alt="Balão Direita" 
+       style="max-width: 200px; height: auto; position: absolute; left: calc(50% + 58px); top: 20px;z-index: 2;">
+  
+</div>
+
+      <div class="col-xs-12">
+        <ul class="countdown">
+          <li><span class="days">365</span><h3>Days</h3></li>
+          <li><span class="hours">24</span><h3>Hours</h3></li>
+          <li><span class="minutes">59</span><h3>Minutes</h3></li>
+          <li><span class="seconds">59</span><h3>Seconds</h3></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end countdown -->
+
+
+<a href="https://www.instagram.com/paredaogeek/" target="_blank" 
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 50px; height: 50px;">
+</a>
+
+
+
+  <section id="video" class="text-center" style="margin-top: -100px;">
+    <div class="container px-4 px-lg-5">
+      <div class="position-relative w-100" style="overflow: hidden;">
+        <video 
+          src="images/paredaovideo.mp4" 
+          autoplay 
+          loop 
+          muted 
+          playsinline 
+          style="
+            width: 100%;
+            height: auto;
+            max-height: 100vh;
+            object-fit: cover;
+            pointer-events: none;
+            display: block;
+            margin-top: 120px;
+          ">
+          Seu navegador não suporta vídeos HTML5.
+        </video>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- INFORMAÇÕES DO EVENTO -->
+  <section class="event-info" style="padding: 60px 20px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="text-center" style="margin-bottom: 30px;">PAREDÃO GEEK – EDIÇÃO ARRAIAL</h2>
+          <p style="text-align: center;">
+            📅 <strong>12 de Julho | Sábado</strong><br>
+            📍 <strong>Club A – Moema, São Paulo</strong><br>
+            🕚 <strong>Horário: 23h às 5h</strong>
+          </p>
+
+          <h3 style="margin-top:30px;">🎟️ Ingressos 2º Lote:</h3>
+          <ul style="line-height: 1.8;">
+            <li>Pista: R$70</li>
+            <li>Camarote: R$110</li>
+            <li>Combo Pista (3 ingressos): R$180</li>
+            <li>Combo Camarote (3 ingressos): R$290</li>
+          </ul>
+
+          <div style="text-align:center; margin-top:20px;">
+            <a href="https://www.sympla.com.br/evento/paredao-geek-12-06-festa-junina/2938413" target="_blank" class="btn btn-primary btn-lg">
+              Comprar Ingresso
+            </a>
+          </div>
+
+          <h3 style="margin-top:30px;">🔥 Tema:</h3>
+          <p>Balada Geek em clima de São João! Vista seu look caipira ou cosplay junino.</p>
+
+          <h3 style="margin-top:30px;">🎶 Música:</h3>
+          <p>Anime Songs • POP • K-POP • Funk • Forró • Eletrônica • Rock • Eletrohits</p>
+
+          <h3 style="margin-top:30px;">🍹 Cardápio OPEN BAR:</h3>
+          <p><strong>Pista:</strong> Jurupinga, Vodka, Energéticos, Refrigerantes, Corote, Água, SHOTS a noite toda!</p>
+          <p><strong>Camarote:</strong> Jurupinga, Caipirinha, Chevette, Cuba Libre, Caipirinhas, Cerveja + tudo que tem na pista.</p>
+
+          <h3 style="margin-top:30px;">🎂 Aniversariantes de Junho e Julho entram GRÁTIS!</h3>
+          <p>Promoção para quem segue o @paredaogeek e preenche o formulário até <strong>10/07</strong>.</p>
+
+          <h3 style="margin-top:30px;">🧥 Chapelaria:</h3>
+          <p>R$15 (Sympla) ou R$20 (no evento). Segurança para mochilas, casacos e itens pessoais.</p>
+
+          <h3 style="margin-top:30px;">🌭 Comidas disponíveis:</h3>
+          <p>Cup Noodles, Hot-dogs, Brownies, Brigadeiros.</p>
+
+          <h3 style="margin-top:30px;">🚇 Como chegar:</h3>
+          <p>
+            Alameda dos Aicás, 1650 – Moema, SP<br>
+            <strong>Metrô:</strong> Estação Eucaliptos (Linha 5-Lilás) – 1 min a pé.<br>
+            <strong>Ônibus:</strong> Diversas linhas disponíveis na região.
+          </p>
+
+          <h3 style="margin-top:30px;">⚠️ Importante:</h3>
+          <p>Evento 18+ (menores não entram). Leve documento original com foto.</p>
+
+          <h3 style="margin-top:30px;">💡 Políticas:</h3>
+          <p>Cancelamento até 7 dias após a compra (mín. 48h antes do evento).</p>
+
+          <p style="text-align: center; margin-top:40px;">
+            <strong>Garanta já seu ingresso e venha para a festa mais divertida de julho!</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIM INFORMAÇÕES DO EVENTO -->
+<style>
+  .photos-3d-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    perspective: 1000px;
+    padding: 20px 0;
+  }
+
+  .photos-3d-vertical .photo {
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    background: #000;
+  }
+
+  .photos-3d-vertical .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    backface-visibility: hidden;
+  }
+
+  .photos-3d-vertical .photo:hover {
+    transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+  }
+</style>
+
+<div class="photos-3d-vertical">
+  <div class="photo">
+    <img src="images/cena1.heic" alt="Foto 1" />
+  </div>
+  <div class="photo">
+    <img src="images/cena2.heic" alt="Foto 2" />
+  </div>
+  <div class="photo">
+    <img src="images/cena3.heic" alt="Foto 3" />
+  </div>
+</div>
+
+<style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
+      overflow-x: hidden;
+    }
+
+    #section3d-container {
+      position: relative;
+      height: 400vh; 
+      background: #111;
+    }
+
+    .scene {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      perspective: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .section {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-style: preserve-3d;
+      transition: transform 0.3s ease-out;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- features -->
+  <section class="features text-center" style="padding: 60px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="title wow bounceIn">
+            <h2>Destaques do Evento</h2>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInUp templatemo-feature" data-wow-delay="0.2s">
+            <i class="fa fa-music"></i>
+            <h4 class="text-uppercase">Line-up Variado</h4>
+            <p>Anime Songs, Pop, K-Pop, Funk, Forró, Rock e mais.</p>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInUp templatemo-feature" data-wow-delay="0.4s">
+            <i class="fa fa-glass"></i>
+            <h4 class="text-uppercase">Open Bar Premium</h4>
+            <p>Vodka, Jurupinga, Caipirinha, Corote, Energéticos e Shots.</p>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInUp templatemo-feature" data-wow-delay="0.6s">
+            <i class="fa fa-star"></i>
+            <h4 class="text-uppercase">Tema Junino Geek</h4>
+            <p>Vista seu look caipira ou cosplay junino para entrar no clima!</p>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInUp templatemo-feature" data-wow-delay="0.8s">
+            <i class="fa fa-birthday-cake"></i>
+            <h4 class="text-uppercase">Aniversariantes Free</h4>
+            <p>Nascidos em Junho e Julho entram grátis seguindo regulamento.<br>
+            <a href="#" target="_blank">Clique aqui</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end features -->
+
+<footer style="background:#111; color:#ccc; text-align:center; padding:10px 20px; font-size:14px; font-family: Arial, sans-serif; bottom: 0; width: 100%;">
+  <p style="margin:0; max-width:800px; margin-left:auto; margin-right:auto; line-height:1.4;">
+    <strong>Aviso:</strong> Este site foi criado apenas para fins de estudo pessoal. Não tem nenhuma intenção de representar ou comercializar o evento ou seus organizadores.<br>
+    Os links de compra aqui presentes são direcionados ao site oficial de vendas do Paredão Geek.
+  </p>
+</footer>
+
+
+  <!-- scripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/typed.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
